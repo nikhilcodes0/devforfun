@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/68623d7056.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app">
+        <h1>To Do List</h1>
+        <button onclick="addTask()" class="add-btn">Add <i class="fa-solid fa-plus"></i></button>
+        <ul class="task-list">
+            <li>test <span class="f-task">&#10005;</span></li>
+            <li>test <span class="f-task">&#10005;</span></li>
+            <li>test <span class="f-task">&#10005;</span></li>
+        </ul>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Task</h2>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="task" placeholder="Enter Task">
+            </div>
+            <div class="modal-footer">
+                <button onclick="saveTask()" class="save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
