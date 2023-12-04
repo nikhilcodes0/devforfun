@@ -181,3 +181,10 @@ a {
     color: black;
     transition: all 0.2s ease-in-out;
 }
+
+@media screen and (min-width: 1600px) {
+    #modal {
+        left: 48rem;
+    }
+    
+}
