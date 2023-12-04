@@ -175,3 +175,9 @@ h2 {
     transition: all 0.2s ease-in-out;
 
 }
+
+a {
+    text-decoration: underline;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
