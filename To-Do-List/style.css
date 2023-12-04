@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.app {
+#app {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +15,10 @@
     background-color: red;
     border-radius: 10px;
     padding: 1rem;
+}
+#app.blur {
+    filter: blur(5px);
+
 }
 
 .add-btn {
@@ -32,26 +36,20 @@
     background-color: #27ae60;
 }
 
-.modal {
-    position: relative;
-    top: -8rem;
-    left: 14rem;
+#modal {
+    position: absolute;
+    top: 35%;
+    left: 12rem;
     background-color: #27ae60;
     width: 400px;
     text-align: center;
     padding: 1rem;
     border-radius: 15px;
-    transform: scale(1.3);
-    display: none;
+    transform: scale(0.001);
     transition: all 0.2s ease-in-out;
 }
 
 .close-btn {
-    position: relative;
-    top: -2.5rem;
-    right: -13rem;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -61,20 +59,17 @@
 
 }
 
-#task {
+#task-input {
     width: 80%;
     padding: .5rem;
     border: none;
     border-radius: 5px;
 }
 
-#task:focus {
+#task-input:focus {
     outline: none;
 }
 
-.close-btn:hover {
-    background-color: #e74c3c;
-}
 
 .save-btn {
     margin: 1rem auto;
@@ -87,8 +82,96 @@
     cursor: pointer;
 }
 
-.task-list {
+#task-list {
     width: 100%;
     margin: 1rem auto;
     list-style: none;
+}
+
+#task-list li {
+    background-color: white;
+    padding: .5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.f-task {
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    align-items: flex-end;
+    position: relative;
+    left: 1rem;
+    cursor: pointer;
+}
+
+.f-task:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#task-list  li::before{
+    content: "";
+    position: relative;
+    background-image: url(assets/circle-regular.svg);
+    background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    margin-right: .5rem;
+    /* display: inline-block; */
+    /* top: 2.7rem; */
+    /* left: 0.5rem; */
+}
+
+#task-list li.checked::before {
+    background-image: url(assets/circle-dot-regular.svg);
+    background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    margin-right: .5rem;
+}
+
+#task-list li.checked {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+#modal.show {
+    transform: scale(1.1);
+}
+
+h2 {
+    position: relative;
+    left: 8rem;
+}
+
+.modal-header {
+    display: flex;
+    /* align-content: center; */
+    align-items: center;
+    gap: 15rem;
+    margin-bottom: 2rem;
+}
+
+#task-list > li > p {
+    width: 17rem;
+    overflow-wrap: anywhere;
+}
+
+#error-msg {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin: 1rem auto;
+    display: none;
+    transition: all 0.2s ease-in-out;
+
 }
