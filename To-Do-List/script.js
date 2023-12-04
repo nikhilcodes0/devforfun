@@ -60,6 +60,7 @@ task_input.addEventListener("keyup", function(e) {
     e.preventDefault();
     if(e.key === 'Enter') {
         addTask();
+        // saveData();
     }
     saveData();
 });
@@ -67,9 +68,16 @@ task_input.addEventListener("keyup", function(e) {
 
 function saveData() {
     localStorage.setItem("data", list_container.innerHTML);
+    // console.log(localStorage.getItem("data"));
 }
 
 function showdata() {
-    list_container.innerHTML = localStorage.getItem("data");
+    if(localStorage.getItem("data") === "") {
+        console.log("empty tasks");
+        return;
+    }
+    else {
+        list_container.innerHTML = localStorage.getItem("data");
+    }
 }
 showdata();
