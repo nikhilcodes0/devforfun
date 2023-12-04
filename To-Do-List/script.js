@@ -53,6 +53,7 @@ function addTask() {
         task.appendChild(span);
         task_input.value = ""; 
         closeModal();
+        saveData();
     }
 }
 
