@@ -69,16 +69,14 @@ task_input.addEventListener("keyup", function(e) {
 
 function saveData() {
     localStorage.setItem("data", list_container.innerHTML);
-    // console.log(localStorage.getItem("data"));
+    if (list_container.innerHTML === "") {
+        localStorage.clear();
+    }
 }
 
 function showdata() {
-    if(localStorage.getItem("data") === "") {
-        console.log("empty tasks");
-        return;
-    }
-    else {
-        list_container.innerHTML = localStorage.getItem("data");
-    }
+    list_container.innerHTML = localStorage.getItem("data");
 }
 showdata();
+
+
