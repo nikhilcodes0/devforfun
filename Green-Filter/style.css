@@ -1,0 +1,45 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    
+}
+
+
+
+p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#input-canvas,
+#output-canvas {
+    width: 61rem;
+    margin: 0 auto;
+}
+
+
+canvas {
+    border: 2px solid black;
+    width: 30rem;
+    overflow: hidden;
+}
+
+.controls {
+    width: 30rem;
+    margin: 1rem auto;
+    margin-left: 50rem;
+}
+
+button {
+    margin: 3rem 8rem;
+}
+
+#canvas3 {
+    margin: 0 15rem;
+}
